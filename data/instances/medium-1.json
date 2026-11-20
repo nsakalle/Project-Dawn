@@ -1,0 +1,28 @@
+{
+  "disruption": {
+    "as_of": "23:00",
+    "external_delays": [
+      {
+        "ext_id": "EXT-MKT",
+        "new_time": "02:00"
+      },
+      {
+        "ext_id": "EXT-POS-US",
+        "new_time": "02:30"
+      }
+    ],
+    "node_outages": [],
+    "deadline_changes": [],
+    "priority_changes": [],
+    "job_holds": [],
+    "use_p90_runtimes": false,
+    "assumptions": [
+      "synthetic"
+    ]
+  },
+  "max_jobs": 6,
+  "options": 5,
+  "seed_rank": 0,
+  "tier": "medium",
+  "qubits": 17
+}

@@ -1,0 +1,11 @@
+node_id,node_name,pool,datacenter,cpu_cores,memory_gb,gpu_count,speed_factor,cost_per_hour_usd,available_from,available_to
+GEN-01,General compute 1,general,DC-East,32,128,0,1.0,1.6,20:00,08:00
+GEN-02,General compute 2,general,DC-East,32,128,0,1.0,1.6,20:00,08:00
+GEN-03,General compute 3,general,DC-West,32,128,0,1.0,1.6,20:00,08:00
+GEN-04,General compute 4 (older),general,DC-West,32,128,0,1.25,1.1,20:00,08:00
+HMEM-01,High-memory 1,highmem,DC-East,48,512,0,1.0,4.2,20:00,08:00
+HMEM-02,High-memory 2,highmem,DC-West,48,512,0,1.0,4.2,20:00,08:00
+GPU-01,GPU server 1 (older),gpu,DC-East,32,256,4,1.2,7.5,20:00,08:00
+GPU-02,GPU server 2,gpu,DC-East,32,256,4,0.8,9.8,20:00,08:00
+DB-01,Database batch host,db,DC-East,64,256,0,1.0,3.5,20:00,08:00
+XFER-01,File transfer gateway,transfer,DC-East,8,32,0,1.0,0.4,20:00,08:00

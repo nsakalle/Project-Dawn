@@ -1,0 +1,13 @@
+ext_id,description,source_system,ext_type,expected_time,latest_time,owner_team,contact
+EXT-HR-TS,Timesheet export from HR system,HR SaaS,file_arrival,20:30,21:30,HR Systems,hr-oncall
+EXT-DB-SNAP,Storage snapshot of orders database complete,Storage array,upstream_batch,20:45,21:15,IT Operations,storage-oncall
+EXT-POS-EU,EU store point-of-sale files,Store systems EU,file_arrival,21:00,22:00,Retail IT,retail-eu-oncall
+EXT-ERP-CLOSE,ERP daily ledger close signal,ERP,upstream_batch,21:30,22:30,Finance Systems,erp-oncall
+EXT-CRM-API,CRM bulk export window opens,CRM SaaS,api_window,22:00,22:00,Sales Ops,crm-admin
+EXT-FX,End-of-day FX rates file,Market data vendor,file_arrival,22:15,23:00,Treasury,treasury-desk
+EXT-WEATHER,Weather forecast feed,Weather API,api_window,22:30,23:30,Data Science,ds-oncall
+EXT-MKT,Closing prices and positions feed,Market data vendor,file_arrival,23:30,00:30,Risk Analytics,risk-oncall
+EXT-SUPP-EDI,Supplier inventory EDI messages,EDI gateway,file_arrival,00:00,01:00,Supply Chain Systems,edi-oncall
+EXT-WEBLOGS,Web server log rotation complete,Web platform,upstream_batch,00:05,00:20,Web Platform,web-oncall
+EXT-POS-US,US store point-of-sale files,Store systems US,file_arrival,01:00,02:00,Retail IT,retail-us-oncall
+EXT-BANK-WIN,Bank SFTP intake window opens,Bank,api_window,02:00,02:00,Treasury,treasury-desk

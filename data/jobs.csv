@@ -1,0 +1,57 @@
+job_id,job_name,application,owner_team,job_type,priority,cpu_cores,memory_gb,gpu_count,est_runtime_min,runtime_p90_min,allowed_pools,license_id,earliest_start,deadline,deadline_type,external_deps
+FIN01,GL extract from ERP,Finance close,Finance Data,etl,P1,8,32,0,45,60,general;highmem,LIC-INFA,20:00,02:00,soft,EXT-ERP-CLOSE
+FIN02,AP subledger load,Finance close,Finance Data,etl,P2,8,24,0,30,40,general;highmem,LIC-INFA,20:00,03:00,soft,EXT-ERP-CLOSE
+FIN03,AR subledger load,Finance close,Finance Data,etl,P2,8,24,0,35,45,general;highmem,LIC-INFA,20:00,03:00,soft,EXT-ERP-CLOSE
+FIN04,FX rates load,Finance close,Finance Data,etl,P1,2,4,0,10,15,general,,20:00,01:00,soft,EXT-FX
+FIN05,Intercompany reconciliation,Finance close,Finance Data,compute,P1,16,96,0,60,85,highmem,LIC-SAS,20:00,04:00,soft,
+FIN06,Trial balance build,Finance close,Finance Data,compute,P1,12,64,0,40,55,general;highmem,,20:00,05:00,hard,
+FIN07,Group consolidation,Finance close,Finance Data,compute,P1,16,128,0,50,70,highmem,LIC-SAS,20:00,05:30,hard,
+FIN08,Management pack PDF render,Finance close,Finance Data,report,P2,4,16,0,20,30,general,,20:00,06:30,soft,
+FIN09,Finance report distribution,Finance close,Finance Data,file_transfer,P2,1,2,0,10,15,transfer;general,,20:00,07:00,hard,
+RSK01,Positions load,Risk,Risk Analytics,etl,P1,8,32,0,25,35,general;highmem,LIC-INFA,20:00,03:00,soft,EXT-MKT
+RSK02,Market data cleanse,Risk,Risk Analytics,compute,P2,4,16,0,20,30,general,,20:00,03:00,soft,EXT-MKT
+RSK03,Value-at-Risk calculation,Risk,Risk Analytics,compute,P1,32,256,0,90,130,highmem,LIC-SAS,20:00,05:00,hard,
+RSK04,Stress test scenarios,Risk,Risk Analytics,compute,P2,24,192,0,75,100,highmem,LIC-SAS,20:00,06:00,soft,
+RSK05,Counterparty exposure,Risk,Risk Analytics,compute,P2,16,64,0,45,60,general;highmem,,20:00,06:00,soft,
+RSK06,Regulatory risk report,Risk,Risk Analytics,report,P1,4,16,0,25,35,general,,20:00,06:30,hard,
+SLS01,POS ingest EU,Retail sales,Retail Analytics,etl,P2,8,16,0,30,45,general,,20:00,02:00,soft,EXT-POS-EU
+SLS02,POS ingest US,Retail sales,Retail Analytics,etl,P2,8,16,0,40,60,general,,20:00,04:00,soft,EXT-POS-US
+SLS03,Sales dedup and cleanse,Retail sales,Retail Analytics,compute,P2,16,64,0,35,50,general;highmem,,20:00,05:00,soft,
+SLS04,Product dimension refresh,Retail sales,Retail Analytics,etl,P3,4,16,0,15,20,general,LIC-INFA,20:00,04:00,soft,
+SLS05,Sales fact load,Retail sales,Retail Analytics,etl,P2,16,64,0,45,60,general;highmem,LIC-INFA,20:00,05:30,soft,
+SLS06,Daily sales aggregates,Retail sales,Retail Analytics,compute,P2,8,32,0,25,35,general,,20:00,06:00,soft,
+SLS07,Sales dashboard refresh,Retail sales,Retail Analytics,report,P2,4,8,0,20,30,general,LIC-TAB,20:00,07:00,hard,
+SLS08,Store performance dashboard,Retail sales,Retail Analytics,report,P3,4,8,0,15,25,general,LIC-TAB,20:00,07:30,soft,
+DW01,CRM accounts extract,Data warehouse,Data Platform,etl,P3,4,8,0,30,50,general,,20:00,03:00,soft,EXT-CRM-API
+DW02,CRM opportunities extract,Data warehouse,Data Platform,etl,P3,4,8,0,25,40,general,,20:00,03:00,soft,EXT-CRM-API
+DW03,HR employee extract,Data warehouse,Data Platform,etl,P3,2,8,0,15,20,general,,20:00,03:00,soft,EXT-HR-TS
+DW04,Core warehouse load,Data warehouse,Data Platform,etl,P2,24,128,0,60,80,general;highmem,LIC-INFA,20:00,05:00,soft,
+DW05,Warehouse index rebuild,Data warehouse,Data Platform,maintenance,P3,32,128,0,40,60,db,,20:00,06:00,soft,
+DW06,Optimizer statistics gather,Data warehouse,Data Platform,maintenance,P3,16,64,0,25,35,db,,20:00,06:30,soft,
+DW07,Customer 360 mart build,Data warehouse,Data Platform,compute,P2,16,64,0,35,50,general;highmem,,20:00,06:30,soft,
+DW08,Data quality checks,Data warehouse,Data Platform,compute,P2,8,16,0,20,30,general,,20:00,07:00,soft,
+ML01,Feature store build,Machine learning,Data Science,compute,P2,16,128,0,45,60,general;highmem,,20:00,05:00,soft,
+ML02,Weather features,Machine learning,Data Science,etl,P3,2,4,0,10,15,general,,20:00,04:00,soft,EXT-WEATHER
+ML03,Demand forecast training,Machine learning,Data Science,ml_training,P2,16,128,2,90,120,gpu,,20:00,05:30,soft,
+ML04,Churn model training,Machine learning,Data Science,ml_training,P3,16,96,2,75,100,gpu,,20:00,06:30,soft,
+ML05,Demand forecast scoring,Machine learning,Data Science,ml_scoring,P2,8,64,1,30,40,gpu,,20:00,06:00,soft,
+ML06,Churn scoring,Machine learning,Data Science,ml_scoring,P3,8,48,1,25,35,gpu,,20:00,07:00,soft,
+ML07,Fraud model retrain,Machine learning,Data Science,ml_training,P4,16,128,4,120,160,gpu,,20:00,08:00,soft,
+ML08,Model results publish,Machine learning,Data Science,file_transfer,P2,2,4,0,10,15,transfer;general,,20:00,07:00,soft,
+SCM01,Inventory snapshot,Supply chain,Supply Chain Systems,etl,P2,8,32,0,20,30,db,,22:00,03:00,soft,
+SCM02,Supplier EDI ingest,Supply chain,Supply Chain Systems,etl,P2,2,8,0,15,25,transfer;general,,20:00,03:00,soft,EXT-SUPP-EDI
+SCM03,Replenishment plan,Supply chain,Supply Chain Systems,compute,P1,16,96,0,50,70,highmem,,20:00,06:30,hard,
+SCM04,Purchase orders EDI send,Supply chain,Supply Chain Systems,file_transfer,P1,1,2,0,10,15,transfer,,20:00,07:00,hard,
+PAY01,Timesheet import,Payroll,HR Systems,etl,P1,4,8,0,15,25,general,,20:00,23:00,soft,EXT-HR-TS
+PAY02,Gross-to-net payroll calculation,Payroll,HR Systems,compute,P1,16,64,0,60,80,general;highmem,,20:00,03:00,hard,
+PAY03,Payroll bank file build,Payroll,HR Systems,compute,P1,2,8,0,15,20,general,,20:00,04:00,hard,
+PAY04,Bank file SFTP send,Payroll,HR Systems,file_transfer,P1,1,2,0,5,10,transfer,,20:00,05:00,hard,EXT-BANK-WIN
+PAY05,Payslip PDF generation,Payroll,HR Systems,report,P3,8,16,0,40,55,general,,20:00,07:30,soft,
+OPS01,Orders DB full backup,IT operations,IT Operations,backup,P2,16,64,0,90,120,db,,20:00,05:00,soft,EXT-DB-SNAP
+OPS02,CRM DB incremental backup,IT operations,IT Operations,backup,P3,8,32,0,30,45,db,,20:00,06:00,soft,
+OPS03,File share backup,IT operations,IT Operations,backup,P3,8,16,0,60,90,general,,21:00,06:00,soft,
+OPS04,Backup verification,IT operations,IT Operations,maintenance,P3,4,16,0,30,40,db,,20:00,07:00,soft,
+OPS05,Web log archive,IT operations,IT Operations,file_transfer,P4,4,8,0,25,40,transfer;general,,20:00,08:00,soft,EXT-WEBLOGS
+OPS06,Security vulnerability scan,IT operations,IT Operations,security,P3,8,16,0,45,60,general,,22:00,06:00,soft,
+OPS07,Log analytics indexing,IT operations,IT Operations,compute,P4,16,64,0,40,60,general;highmem,,20:00,08:00,soft,
+OPS08,Temp space cleanup,IT operations,IT Operations,maintenance,P4,2,4,0,10,15,general,,05:00,08:00,soft,

@@ -1,0 +1,35 @@
+{
+  "disruption": {
+    "as_of": "00:30",
+    "external_delays": [
+      {
+        "ext_id": "EXT-BANK-WIN",
+        "new_time": "04:30"
+      },
+      {
+        "ext_id": "EXT-POS-US",
+        "new_time": "01:30"
+      }
+    ],
+    "node_outages": [
+      {
+        "node_id": "GEN-03",
+        "start": "02:30",
+        "end": "05:30",
+        "reason": "synthetic"
+      }
+    ],
+    "deadline_changes": [],
+    "priority_changes": [],
+    "job_holds": [],
+    "use_p90_runtimes": false,
+    "assumptions": [
+      "synthetic"
+    ]
+  },
+  "max_jobs": 5,
+  "options": 2,
+  "seed_rank": 1,
+  "tier": "toy",
+  "qubits": 8
+}

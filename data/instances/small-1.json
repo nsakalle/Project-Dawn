@@ -1,0 +1,40 @@
+{
+  "disruption": {
+    "as_of": "22:45",
+    "external_delays": [
+      {
+        "ext_id": "EXT-SUPP-EDI",
+        "new_time": "01:30"
+      },
+      {
+        "ext_id": "EXT-POS-US",
+        "new_time": "01:30"
+      }
+    ],
+    "node_outages": [
+      {
+        "node_id": "GEN-01",
+        "start": "00:45",
+        "end": "01:45",
+        "reason": "synthetic"
+      }
+    ],
+    "deadline_changes": [
+      {
+        "job_id": "SLS05",
+        "deadline": "05:00"
+      }
+    ],
+    "priority_changes": [],
+    "job_holds": [],
+    "use_p90_runtimes": false,
+    "assumptions": [
+      "synthetic"
+    ]
+  },
+  "max_jobs": 7,
+  "options": 4,
+  "seed_rank": 2,
+  "tier": "small",
+  "qubits": 16
+}

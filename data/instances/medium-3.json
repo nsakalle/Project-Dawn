@@ -1,0 +1,40 @@
+{
+  "disruption": {
+    "as_of": "22:15",
+    "external_delays": [
+      {
+        "ext_id": "EXT-POS-US",
+        "new_time": "02:30"
+      },
+      {
+        "ext_id": "EXT-WEATHER",
+        "new_time": "01:00"
+      }
+    ],
+    "node_outages": [
+      {
+        "node_id": "HMEM-02",
+        "start": "22:30",
+        "end": "02:30",
+        "reason": "synthetic"
+      }
+    ],
+    "deadline_changes": [
+      {
+        "job_id": "FIN08",
+        "deadline": "05:30"
+      }
+    ],
+    "priority_changes": [],
+    "job_holds": [],
+    "use_p90_runtimes": false,
+    "assumptions": [
+      "synthetic"
+    ]
+  },
+  "max_jobs": 8,
+  "options": 5,
+  "seed_rank": 0,
+  "tier": "medium",
+  "qubits": 17
+}

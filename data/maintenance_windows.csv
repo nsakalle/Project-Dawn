@@ -1,0 +1,5 @@
+maint_id,node_id,start,end,reason
+MW-01,DB-01,02:00,02:45,Storage firmware patch
+MW-02,GEN-02,23:00,23:30,Monthly OS patch reboot
+MW-03,GPU-01,04:30,05:30,GPU driver update
+MW-04,XFER-01,06:30,06:45,Certificate rotation

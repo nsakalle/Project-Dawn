@@ -1,0 +1,1 @@
+It's 23:15. The market data vendor says tonight's closing prices feed will be about 90 minutes late, around 01:00. Infrastructure needs HMEM-02 down for emergency patching from 01:00 to 04:00. Risk has asked for the VaR numbers by 04:30 instead of 05:00. And skip the log analytics indexing tonight.

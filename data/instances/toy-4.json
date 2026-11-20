@@ -1,0 +1,40 @@
+{
+  "disruption": {
+    "as_of": "00:45",
+    "external_delays": [
+      {
+        "ext_id": "EXT-BANK-WIN",
+        "new_time": "04:30"
+      },
+      {
+        "ext_id": "EXT-POS-US",
+        "new_time": "02:00"
+      }
+    ],
+    "node_outages": [
+      {
+        "node_id": "GPU-01",
+        "start": "02:45",
+        "end": "06:45",
+        "reason": "synthetic"
+      }
+    ],
+    "deadline_changes": [
+      {
+        "job_id": "DW07",
+        "deadline": "05:30"
+      }
+    ],
+    "priority_changes": [],
+    "job_holds": [],
+    "use_p90_runtimes": false,
+    "assumptions": [
+      "synthetic"
+    ]
+  },
+  "max_jobs": 2,
+  "options": 5,
+  "seed_rank": 1,
+  "tier": "toy",
+  "qubits": 5
+}

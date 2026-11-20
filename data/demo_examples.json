@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Demo: late market data, server patching, earlier VaR deadline",
+    "message": "It's 23:15. The market data vendor says tonight's closing prices feed will be about 90 minutes late, around 01:00. Infrastructure needs HMEM-02 down for emergency patching from 01:00 to 04:00. Risk has asked for the VaR numbers by 04:30 instead of 05:00. And skip the log analytics indexing tonight."
+  },
+  {
+    "title": "Bank window slips and a high-memory server goes down",
+    "message": "It's midnight. The bank says their SFTP intake window won't open until 04:00 tonight. HMEM-02 also needs a reboot from 01:00 to 04:00."
+  },
+  {
+    "title": "Supplier EDI late while HMEM-02 is being patched",
+    "message": "It's 22:15. HMEM-02 is down for patching from 23:15 to 03:15, and supplier EDI messages won't arrive until 02:30."
+  },
+  {
+    "title": "Early market data, but a general server fails",
+    "message": "It's 22:45. Good news: the market data feed is early, landing at 00:00. Bad news: GEN-01 has a failing disk, take it offline from 00:15 to 04:15. Risk wants positions loaded by 02:00."
+  },
+  {
+    "title": "Busy night: two late feeds, HMEM-02 down, earlier finance pack",
+    "message": "It's 22:15. US store sales files are delayed until 02:30 and the weather feed until 01:00. HMEM-02 is out of service from 22:30 to 02:30. Finance wants the management pack by 05:30."
+  },
+  {
+    "title": "US sales files two hours late: no schedule can save it",
+    "message": "It's 22:40. US POS files are delayed two hours."
+  }
+]

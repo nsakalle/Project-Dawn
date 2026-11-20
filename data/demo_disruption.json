@@ -1,0 +1,14 @@
+{
+  "as_of": "23:15",
+  "external_delays": [{"ext_id": "EXT-MKT", "new_time": "01:00"}],
+  "node_outages": [{"node_id": "HMEM-02", "start": "01:00", "end": "04:00", "reason": "emergency patching"}],
+  "deadline_changes": [{"job_id": "RSK03", "deadline": "04:30", "deadline_type": "hard"}],
+  "priority_changes": [],
+  "job_holds": ["OPS07"],
+  "use_p90_runtimes": false,
+  "assumptions": [
+    "'about 90 minutes late, around 01:00' taken as a new expected arrival of 01:00",
+    "'VaR numbers' matched to job RSK03 (Value-at-Risk calculation), deadline kept as hard",
+    "'log analytics indexing' matched to job OPS07"
+  ]
+}

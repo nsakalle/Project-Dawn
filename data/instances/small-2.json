@@ -1,0 +1,31 @@
+{
+  "disruption": {
+    "as_of": "00:45",
+    "external_delays": [
+      {
+        "ext_id": "EXT-BANK-WIN",
+        "new_time": "04:00"
+      }
+    ],
+    "node_outages": [
+      {
+        "node_id": "GPU-02",
+        "start": "01:45",
+        "end": "04:45",
+        "reason": "synthetic"
+      }
+    ],
+    "deadline_changes": [],
+    "priority_changes": [],
+    "job_holds": [],
+    "use_p90_runtimes": false,
+    "assumptions": [
+      "synthetic"
+    ]
+  },
+  "max_jobs": 3,
+  "options": 4,
+  "seed_rank": 0,
+  "tier": "small",
+  "qubits": 10
+}

@@ -1,0 +1,4 @@
+license_id,product,concurrent_seats,note
+LIC-SAS,SAS analytics server,2,Two concurrent sessions on the current contract
+LIC-INFA,Informatica ETL,3,Three concurrent workflows
+LIC-TAB,Tableau extract refresh,2,Two concurrent extract refreshes
